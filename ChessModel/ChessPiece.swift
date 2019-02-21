@@ -8,7 +8,16 @@
 
 import Foundation
 
-public struct ChessPiece {
+public struct ChessPiece: CustomStringConvertible {
     public let type: PieceType
     public let color: PieceColor
+
+    public init(type: PieceType, color: PieceColor) {
+        self.type = type
+        self.color = color
+    }
+
+    public var description: String {
+        return "\(color) \(type)"
+    }
 }

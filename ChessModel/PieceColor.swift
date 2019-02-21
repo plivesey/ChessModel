@@ -8,11 +8,20 @@
 
 import Foundation
 
-public enum PieceColor {
+public enum PieceColor: CustomStringConvertible {
     case white
     case black
 
     public var opposite: PieceColor {
         return self == .white ? .black : .white
+    }
+
+    public var description: String {
+        switch self {
+        case .white:
+            return "White"
+        case .black:
+            return "Black"
+        }
     }
 }
